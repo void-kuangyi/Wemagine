@@ -1,5 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+function tracking() {
+ //Put the tracking code here
+}
 
 function App() {
   return (
@@ -7,11 +10,11 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+         Hello, this is wemagine
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          onClick={tracking}
           target="_blank"
           rel="noopener noreferrer"
         >
