@@ -12,14 +12,14 @@ function App() {
         <p>
          Hello, this is wemagine
         </p>
-        <a
+        <button
           className="App-link"
           onClick={tracking}
           target="_blank"
           rel="noopener noreferrer"
         >
           Learn React
-        </a>
+        </button>
       </header>
     </div>
   );
