@@ -1,5 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from "./Header"
+import Headline from './Headline';
+
 function tracking() {
  //Put the tracking code here
 }
@@ -7,11 +9,8 @@ function tracking() {
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         Hello, this is wemagine
-        </p>
+        <Header />
+        <Headline />
         <button
           className="App-link"
           onClick={tracking}
@@ -20,7 +19,6 @@ function App() {
         >
           Get Started
         </button>
-      </header>
     </div>
   );
 }
