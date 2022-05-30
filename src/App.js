@@ -4,9 +4,7 @@ import Header from "./Header";
 import Headline from "./Headline";
 import Plan from "./Plan";
 
-function tracking() {
-  //Put the tracking code here
-}
+
 
 function App() {
   return (
