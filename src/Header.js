@@ -15,13 +15,18 @@ const Menu = styled.div`
 const StyledHeader = styled.div`
   display: flex;
   padding-left: 70px;
-  padding-top: 26px;
+  padding-top: 8px;
   align-item: baseline;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 12px 0px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 `;
 
 const Header = () => (
   <StyledHeader>
-    <img src={logo} width="10%" height="auto" />
+    <img src={logo} width="20%" height="auto" />
     <Menu>
       <MenuItem href="#features">Features</MenuItem>
       <MenuItem href="#prices">Pricing</MenuItem>

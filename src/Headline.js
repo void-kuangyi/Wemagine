@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
 
 const HeadText = styled.div`
   font-size: 48px;
@@ -19,12 +21,15 @@ const StyledButton = styled.a`
 `;
 
 const StyledHeadline = styled.div`
-  padding: 100px;
+  padding: 340px;
+  margin-right: 20px;
+  margin-left: 20px;
   text-align: center;
+  background-image: url("background.png");
+  color: white;
 `;
 const StyledSecondaryHeadline = styled.div`
   display: flex;
-  margin-top: 160px;
   padding: 100px;
 `;
 
@@ -56,7 +61,17 @@ const Headline = () => (
       <StyledButton href="#prices">Get Started Now</StyledButton>
     </StyledHeadline>
     <StyledSecondaryHeadline>
-      <StyledImage />
+      <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}>
+        <div>
+          <img src="0.jpeg" />
+        </div>
+        <div>
+          <img src="1.jpeg" />
+        </div>
+        <div>
+          <img src="2.jpeg" />
+        </div>
+      </Carousel>
       <StyledText>
         <h1>Co-create your office artwork</h1>
         <p>
