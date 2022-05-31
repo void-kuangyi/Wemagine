@@ -5,13 +5,13 @@ import styled from "styled-components";
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 
-function tracking() {
+function tracking(ip, buttonid) {
   let body = {
-    ip: "192.168.1.1",
-    buttonid: 1
+    ip: ip,
+    buttonid: buttonid
   };
   axios
-    .post("https://api.niekmuijs.nl/create", body)
+    .post("http://api.niekmuijs.nl/create", body)
     .then(function(response) {
       console.log(response.data);
     })
@@ -20,10 +20,7 @@ function tracking() {
     })
 }
 
-function pushApi() {
 
-
-}
 
 const StyledDivider = styled.hr`
   border-top: 1px solid #d1d5db;
@@ -71,7 +68,7 @@ const Plan = () => (
         <p>Wemagine kit software</p>
       </StyledFeature>
       <h1>€79/month</h1>
-      <StyledButton onClick={() => tracking()}>
+      <StyledButton onClick={() => tracking("192.168.1.1", 1)}>
         <b>
           Get Started <span>&#8594;</span>{" "}
         </b>
@@ -86,7 +83,7 @@ const Plan = () => (
         <p>Customised business theme arts</p>
       </StyledFeature>
       <h1>€129/month</h1>
-      <StyledButton onClick={() => tracking()}>
+      <StyledButton onClick={() => tracking("192.168.1.1", 2)}>
         <b>
           Get Started <span>&#8594;</span>{" "}
         </b>
@@ -103,7 +100,7 @@ const Plan = () => (
         <p>Effortless installation</p>
       </StyledFeature>
       <h1>€199/month</h1>
-      <StyledButton onClick={() => tracking()}>
+      <StyledButton onClick={() => tracking("192.168.1.1", 3)}>
         <b>
           Get Started <span>&#8594;</span>{" "}
         </b>
