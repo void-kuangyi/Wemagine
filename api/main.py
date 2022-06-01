@@ -5,6 +5,7 @@ from flask import jsonify
 from flask import flash, request
 
 @app.route('/create', methods=['POST'])
+@app.cross_origin(origin='https://wemagine.niekmuijs.nl',headers=['Content- Type','Authorization'])
 def create_emp():
     try:        
         _json = request.json
@@ -21,9 +22,11 @@ def create_emp():
             conn.commit()
             respone = jsonify('button logged!')
             respone.status_code = 200
+            
             return respone
         else:
             return showMessage()
+            
     except Exception as e:
         print(e)
     finally:
