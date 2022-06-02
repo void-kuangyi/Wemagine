@@ -8,7 +8,10 @@ import styled from "styled-components";
 function tracking(ip, buttonid) {
   let body = {
     ip: ip,
-    buttonid: buttonid
+    buttonid: buttonid,
+    headers: {
+      "Access-Control-Allow-Origin": "*"
+    }
   };
   axios
     .post("https://api.niekmuijs.nl/create", body)
