@@ -99,7 +99,7 @@ const Plan = () => (
         <p>Customised business theme arts</p>
       </StyledFeature>
       <h1>€129/month</h1>
-      <StyledButton onClick={() => tracking("192.168.1.1", 2)}>
+      <StyledButton onClick={() => getIpClient(2)}>
         <b>
           Get Started <span>&#8594;</span>{" "}
         </b>
@@ -116,7 +116,7 @@ const Plan = () => (
         <p>Effortless installation</p>
       </StyledFeature>
       <h1>€199/month</h1>
-      <StyledButton onClick={() => tracking("192.168.1.1", 3)}>
+      <StyledButton onClick={() => getIpClient(3)}>
         <b>
           Get Started <span>&#8594;</span>{" "}
         </b>

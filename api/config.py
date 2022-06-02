@@ -9,4 +9,9 @@ app.config['MYSQL_DATABASE_HOST'] = 'sql11.freemysqlhosting.net'
 app.config['MYSQL_DATABASE_PORT'] = 3306
 app.config['SECRET_KEY'] = 'the quick brown fox jumps over the lazy   dog'
 app.config['CORS_HEADERS'] = 'Content-Type'
+app.config['CORS_ALLOW_ORIGIN'] = "*,*"
+app.config['CORS_EXPOSE_HEADERS'] = "*,*"
+app.config['CORS_ALLOW_HEADERS'] = "content-type,*"
+
+
 mysql.init_app(app)
