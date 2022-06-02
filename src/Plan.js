@@ -11,6 +11,7 @@ async function getIpClient(buttonid) {
 
 
   } catch (error) {
+    tracking("iperror", buttonid);
     console.error(error);
   }
 }
