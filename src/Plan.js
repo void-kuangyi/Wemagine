@@ -4,8 +4,21 @@ import styled from "styled-components";
 
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+async function getIpClient(buttonid) {
+  try {
+    await axios.get('https://api.ipify.org?format=json').then(response => tracking(response.data.ip, buttonid));
+
+
+
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+
 
 function tracking(ip, buttonid) {
+
   let body = {
     ip: ip,
     buttonid: buttonid,
@@ -71,7 +84,7 @@ const Plan = () => (
         <p>Wemagine kit software</p>
       </StyledFeature>
       <h1>€79/month</h1>
-      <StyledButton onClick={() => tracking("192.168.1.1", 1)}>
+      <StyledButton onClick={() => getIpClient(1)}>
         <b>
           Get Started <span>&#8594;</span>{" "}
         </b>
