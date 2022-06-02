@@ -3,9 +3,10 @@ from app import app
 from config import mysql
 from flask import jsonify
 from flask import flash, request
+from flask_cors import CORS
 
 @app.route('/create', methods=['POST'])
-@app.cross_origin(origin='https://wemagine.niekmuijs.nl',headers=['Content- Type','Authorization'])
+#@app.cross_origin(origin='https://wemagine.niekmuijs.nl',headers=['Content- Type','Authorization'])
 def create_emp():
     try:        
         _json = request.json
@@ -33,6 +34,7 @@ def create_emp():
         cursor.close() 
         conn.close()          
      
+
 @app.route('/button')
 def button():
     try:
@@ -71,9 +73,10 @@ def update_emp():
         _json = request.json
         _ip = _json['ip']
         _buttonid = _json['buttonid']
+        _id = _json['id']
         if _ip and _buttonid and request.method == 'PUT':			
             sqlQuery = "UPDATE button_logging SET ip=%s, buttonid=%s WHERE id=%s"
-            bindData = (_ip, _buttonid)
+            bindData = (_ip, _buttonid, _id)
             conn = mysql.connect()
             cursor = conn.cursor()
             cursor.execute(sqlQuery, bindData)

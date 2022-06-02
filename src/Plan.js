@@ -11,7 +11,7 @@ function tracking(ip, buttonid) {
     buttonid: buttonid
   };
   axios
-    .post("http://api.niekmuijs.nl/create", body)
+    .post("https://api.niekmuijs.nl/create", body)
     .then(function(response) {
       console.log(response.data);
     })
