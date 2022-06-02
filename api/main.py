@@ -5,6 +5,12 @@ from flask import jsonify
 from flask import flash, request
 from flask_cors import CORS
 
+@app.route('/', methods=['POST'])
+def api():
+    response = jsonify('works')
+    response.status_code = 200
+    return response
+
 @app.route('/create', methods=['POST'])
 #@app.cross_origin(origin='https://wemagine.niekmuijs.nl',headers=['Content- Type','Authorization'])
 def create_emp():
@@ -120,4 +126,4 @@ def showMessage(error=None):
     return respone
         
 if __name__ == "__main__":
-    app.run(port=8181)
+    app.run(port=8181, host='192.168.1.115')
